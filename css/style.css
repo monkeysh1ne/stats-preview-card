@@ -29,90 +29,109 @@ body {
   color: var(--accent);
 }
 
-/* Layout */
 .wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  row-gap: 30px;
-  margin: 10%;
+  margin: 8rem;
 }
 
-/* Text */
-.text {
+/* Text Only */
+#cta {
+  padding: 4rem;
   background-color: var(--card-bg);
   border-radius: 5px 0 0 5px;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 12%;
 }
 
-.text h1,
-.blurb {
-  grid-column-start: 1;
-  grid-column-end: -1;
+#cta > p {
+  padding-bottom: 4rem;
 }
 
-.text h1 {
+#cta h1 {
+  font-size: 2rem;
   padding-bottom: 2rem;
 }
 
-.blurb {
-  padding-bottom: 80px;
-}
-
 /* Stats */
-.stats {
+#stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 50px;
+  gap: 20px;
 }
 
-.stats > div > p {
-  margin: 10px 0;
+#stats > div > h3 {
+  padding-bottom: 0.5rem;
+}
+
+#stats > div > p {
   text-transform: uppercase;
+  font-size: 12px;
 }
 
-/* Graphic */
-.graphic {
-  background-color: blueviolet;
+/* Image */
+#graphic {
+  background-color: var(--accent);
   border-radius: 0 5px 5px 0;
 }
 
+.overlay {
+  /* width: 100%;
+  height: 100%; */
+  background-color: #000;
+}
+
 img {
-  opacity: 0.5;
+  border-radius: 0 5px 5px 0;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
   height: 100%;
-  width: 100%;
-  border-radius: 0 10px 10px 0;
 }
 
 /* Mobile */
-@media only screen and (max-width: 375px) {
-  /* Graphic then Text */
+@media (max-width: 375px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   .wrapper {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 15px;
+    padding-top: 3rem;
+    width: 100%;
+    margin: 0;
   }
 
-  .graphic {
-    grid-row: 1 / 1;
-  }
-
-  .text,
-  .blurb {
-    display: grid;
-    grid-template-columns: 100%;
+  #cta {
     grid-row: 2;
-    text-align: center;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
   }
 
-  .stats {
+  #stats {
     display: grid;
     grid-template-columns: 100%;
   }
 
-  .stats h3 {
-    font-size: 1.5rem;
+  #stats > .card {
+    justify-self: center;
+    padding: 0;
+    width: 70px;
+  }
+
+  #graphic {
+    grid-row: 1;
+    border-radius: 10px 10px 0 0;
+    height: 100%;
+  }
+
+  img {
+    grid-row: 1;
+    background: url('/images/image-header-mobile.jpg') left top no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
   }
 }
