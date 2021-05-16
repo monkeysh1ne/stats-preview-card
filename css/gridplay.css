@@ -81,12 +81,20 @@ img {
 
 /* Mobile */
 @media (max-width: 375px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   .wrapper {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     align-items: center;
-    margin: 1.5rem;
-    margin-top: 5rem;
+    padding: 15px;
+    padding-top: 3rem;
+    width: 100%;
+    margin: 0;
   }
 
   #cta {
@@ -102,6 +110,7 @@ img {
 
   #stats > .card {
     justify-self: center;
+    padding: 0;
   }
 
   #graphic {
