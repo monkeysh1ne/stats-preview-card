@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="/css/style_2nd.css" />
 
     <title>Frontend Mentor | Stats preview card component</title>
 
@@ -26,10 +27,30 @@
     </style>
   </head>
   <body>
-    Get insights that help your business grow. Discover the benefits of data
-    analytics and make better decisions regarding revenue, customer experience,
-    and overall efficiency. 10k+ companies 314 templates 12m+ queries
-
+    <div class="wrapper">
+      <div class="card" id="text-area">
+        <div class="hero">
+          Get
+          <span>insights</span>
+          that help your business grow.
+        </div>
+        <div class="body-text">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </div>
+        <div class="stats-cards">
+          <div class="stats-card">10k+ companies</div>
+          <div class="stats-card">314 templates</div>
+          <div class="stats-card">12m+ queries</div>
+        </div>
+      </div>
+      <div class="card" id="img-area">
+        <img
+          src="/images/image-header-desktop.jpg"
+          alt="woman at work smiling"
+        />
+      </div>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
