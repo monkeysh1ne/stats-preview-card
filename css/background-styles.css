@@ -1,0 +1,75 @@
+/* Background Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* ::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primary */
+  --default-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  /* Neutral */
+  --white-main-pgph: hsla(0, 0%, 100%, 0.75);
+  --white-stat-headings: hsla(0, 0%, 100%, 0.6);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.card {
+  position: relative;
+  width: 540px;
+  max-height: 370px;
+  display: flex;
+  align-items: center;
+  background-color: var(--card-bg);
+  padding: 70px;
+  color: var(--white-main-pgph);
+}
+
+#text-area {
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+}
+
+#stats-cards {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* background-color: purple; */
+  justify-content: space-between;
+}
+
+#stats-cards > div > h1 {
+  font-size: 1.2rem;
+}
+
+#stats-cards > div > p {
+  text-transform: uppercase;
+}
